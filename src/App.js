@@ -8,12 +8,15 @@
 
 import React from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
+import Dashboard from './screens/Dashboard';
 
 const App = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView />
+      <StatusBar barStyle="light-content" />
+      <SafeAreaView>
+        <Dashboard />
+      </SafeAreaView>
     </>
   );
 };
