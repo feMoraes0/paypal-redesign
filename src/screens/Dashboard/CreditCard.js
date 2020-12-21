@@ -1,19 +1,5 @@
 import React from 'react';
 import {View, StyleSheet, Image, Text} from 'react-native';
-import Cog from '../../assets/icons/cog.svg';
-
-const Header = () => {
-  return (
-    <View style={styles.header}>
-      <Image
-        style={styles.headerUserImage}
-        source={require('../../assets/images/person_05.png')}
-      />
-      <Image source={require('../../assets/images/paypal.png')} />
-      <Cog />
-    </View>
-  );
-};
 
 const CreditCard = () => {
   return (
@@ -22,7 +8,7 @@ const CreditCard = () => {
         <View style={styles.creditCardBodyInfos}>
           <Image
             style={styles.creditCardBodyInfosImage}
-            source={require('../../assets/images/person_02.png')}
+            source={require('../../../assets/images/person_02.png')}
           />
           <Text style={styles.creditCardBodyInfosTitle}>
             Nina te ha enviado
@@ -30,7 +16,7 @@ const CreditCard = () => {
           <Text style={styles.creditCardBodyInfosSubtitle}>20,00</Text>
         </View>
         <View style={styles.creditCardBodyButton}>
-          <Text>Hoy</Text>
+          <Text style={styles.creditCardBodyButtonText}>HOY</Text>
         </View>
       </View>
       <View style={styles.creditCardFooter}>
@@ -48,33 +34,7 @@ const CreditCard = () => {
   );
 };
 
-const Dashboard = () => {
-  return (
-    <View style={styles.container}>
-      <Header />
-      <CreditCard />
-    </View>
-  );
-};
-
 const styles = StyleSheet.create({
-  container: {
-    paddingTop: 10,
-    paddingHorizontal: 17.0,
-  },
-  header: {
-    paddingLeft: 9.0,
-    paddingRight: 4.0,
-    marginBottom: 25.0,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  headerUserImage: {
-    width: 36,
-    height: 36,
-    borderRadius: 100,
-  },
   creditCard: {
     backgroundColor: '#0262E9',
     borderRadius: 15.0,
@@ -97,7 +57,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     fontSize: 14.0,
     lineHeight: 17.0,
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-500',
     color: '#FFFFFF',
     marginTop: 6.0,
   },
@@ -105,7 +65,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 28.0,
     lineHeight: 34.0,
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-600',
     color: '#FFFFFF',
   },
   creditCardBodyButton: {
@@ -119,9 +79,9 @@ const styles = StyleSheet.create({
   },
   creditCardBodyButtonText: {
     fontWeight: '600',
-    fontSize: 10.0,
-    lineHeight: 12.0,
-    fontFamily: 'Montserrat',
+    fontSize: 13.0,
+    lineHeight: 15.0,
+    fontFamily: 'Montserrat-600',
     color: '#3A2424',
   },
   creditCardFooter: {
@@ -143,24 +103,24 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 12.0,
     lineHeight: 15.0,
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-600',
     color: '#FFFFFF',
   },
   creditCardFooterMessageTitle: {
     fontWeight: '500',
-    fontSize: 10.0,
-    lineHeight: 12.0,
-    fontFamily: 'Montserrat',
+    fontSize: 13.0,
+    lineHeight: 15.0,
+    fontFamily: 'Montserrat-500',
     color: '#FFFFFF',
     opacity: 0.6,
   },
   creditCardFooterMessageSubtitle: {
     fontWeight: '500',
-    fontSize: 14.0,
-    lineHeight: 17.0,
-    fontFamily: 'Montserrat',
+    fontSize: 17.0,
+    lineHeight: 20.0,
+    fontFamily: 'Montserrat-500',
     color: '#FFFFFF',
   },
 });
 
-export default Dashboard;
+export default CreditCard;
